@@ -1,0 +1,47 @@
+{
+  "version": "0.0.0",
+  "languages": [
+    {
+      "name": "TypeScript",
+      "alias": "typescript",
+      "package_version": "*",
+      "config_version": "0.0.0",
+      "cole_plugin": "@cole-framework/cole-ts",
+      "cole_cli_plugin": "@cole-framework/cole-cli-typescript",
+    },
+    {
+      "name": "JavaScript",
+      "alias": "javascript",
+      "package_version": "*",
+      "config_version": "0.0.0",
+      "cole_plugin": "@cole-framework/cole-js",
+      "cole_cli_plugin": "@cole-framework/cole-cli-javascript"
+    }
+  ],
+  "databases": [
+    {
+      "name": "MongoDB",
+      "alias": "mongo",
+      "package_version": "*",
+      "config_version": "0.0.0",
+      "cole_plugin": "@cole-framework/cole-storage-mongo"
+    },
+    {
+      "version": "0.0.0",
+      "name": "Redis",
+      "alias": "redis",
+      "package_version": "*",
+      "config_version": "0.0.0",
+      "cole_plugin": "@cole-framework/cole-storage-redis"
+    },
+    {
+      "version": "0.0.0",
+      "name": "MySQL",
+      "alias": "mysql",
+      "package_version": "*",
+      "config_version": "0.0.0",
+      "cole_plugin": "@cole-framework/cole-storage-mysql"
+    }
+  ],
+  "web_frameworks": []
+}
