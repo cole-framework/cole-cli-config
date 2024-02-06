@@ -1,0 +1,114 @@
+{
+  "version": "0.0.0",
+  "languages": [
+    {
+      "name": "TypeScript",
+      "package_name": "typescript",
+      "alias": "typescript",
+      "dependencies": [
+        "inversify",
+        "reflect-metadata"
+      ],
+      "cole_plugin": "@cole-framework/cole-ts",
+      "cole_cli_plugin": "@cole-framework/cole-cli-typescript",
+      "types": [
+        "string",
+        "number",
+        "boolean",
+        "object",
+        "any",
+        "unknown",
+        "null",
+        "Array",
+        "Set",
+        "Map",
+        "Date",
+        "Buffer",
+        "bigint",
+        "void"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "package_name": "javascript",
+      "alias": "javascript",
+      "dependencies": [],
+      "cole_plugin": "@cole-framework/cole-js",
+      "cole_cli_plugin": "@cole-framework/cole-cli-javascript"
+    }
+  ],
+  "web_frameworks": [
+    {
+      "name": "Express.js",
+      "alias": "express",
+      "package_name": "express",
+      "dependencies": {
+        "typescript": [
+          "@types/express"
+        ],
+        "javascript": []
+      }
+    },
+    {
+      "name": "Fastify",
+      "alias": "fastify",
+      "package_name": "fastify",
+      "dependencies": {
+        "typescript": [
+          "@types/fastify"
+        ],
+        "javascript": []
+      }
+    }
+  ],
+  "databases": [
+    {
+      "name": "MongoDB",
+      "alias": "mongo",
+      "package_name": "mongodb",
+      "case_style": "snake",
+      "dependencies": {
+        "typescript": [],
+        "javascript": []
+      },
+      "mappings": {
+        "typescript": {
+          "ObjectID": "ObjectID",
+          "Long": "bigint",
+          "ISODate": "Date",
+          "Timestamp": "Timestamp",
+          "Regex": "RegExp",
+          "Binary": "Buffer"
+        }
+      },
+      "cole_plugin": "@cole-framework/cole-storage-mongo"
+    },
+    {
+      "name": "Redis",
+      "alias": "redis",
+      "package_name": "redis",
+      "case_style": "snake",
+      "dependencies": {
+        "typescript": [],
+        "javascript": []
+      },
+      "cole_plugin": "@cole-framework/cole-storage-redis"
+    },
+    {
+      "name": "MySQL",
+      "alias": "mysql",
+      "package_name": "mysql",
+      "case_style": "snake",
+      "dependencies": {
+        "typescript": [],
+        "javascript": []
+      },
+      "mappings": {
+        "typescript": {
+          "DATETIME": "Date"
+        }
+      },
+      "cole_plugin": "@cole-framework/cole-storage-mysql"
+    }
+  ]
+}
