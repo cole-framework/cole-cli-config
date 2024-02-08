@@ -4,8 +4,10 @@
     {
       "name": "TypeScript",
       "alias": "typescript",
-      "package": "typescript@^4.5.4",
-      "dependencies": ["dev:@types/node@^18.7.14"],
+      "packages": [
+        "typescript@^4.5.4",
+        "dev:@types/node@^18.7.14"
+      ],
       "plugin": "@cole-framework/cole-ts",
       "cli_plugin": "@cole-framework/cole-cli-typescript",
     },
