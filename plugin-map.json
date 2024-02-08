@@ -4,44 +4,103 @@
     {
       "name": "TypeScript",
       "alias": "typescript",
-      "package_version": "*",
-      "config_version": "0.0.0",
-      "cole_plugin": "@cole-framework/cole-ts",
-      "cole_cli_plugin": "@cole-framework/cole-cli-typescript",
+      "package": "typescript@^4.5.4",
+      "dependencies": ["dev:@types/node@^18.7.14"],
+      "plugin": "@cole-framework/cole-ts",
+      "cli_plugin": "@cole-framework/cole-cli-typescript",
     },
     {
       "name": "JavaScript",
       "alias": "javascript",
-      "package_version": "*",
-      "config_version": "0.0.0",
-      "cole_plugin": "@cole-framework/cole-js",
-      "cole_cli_plugin": "@cole-framework/cole-cli-javascript"
-    }
+      "plugin": "@cole-framework/cole-js",
+      "cli_plugin": "@cole-framework/cole-cli-javascript",
+    },
   ],
   "databases": [
     {
       "name": "MongoDB",
       "alias": "mongo",
-      "package_version": "*",
-      "config_version": "0.0.0",
-      "cole_plugin": "@cole-framework/cole-storage-mongo"
+      "packages": {
+        "typescript": ["mongodb"],
+        "javascript": ["mongodb"]
+      },
+      "plugins": {
+        "typescript": "@cole-framework/cole-ts-mongo",
+        "javascript": "@cole-framework/cole-js-mongo",
+      }
     },
     {
-      "version": "0.0.0",
       "name": "Redis",
       "alias": "redis",
-      "package_version": "*",
-      "config_version": "0.0.0",
-      "cole_plugin": "@cole-framework/cole-storage-redis"
+      "packages": {
+        "typescript": ["redis"],
+        "javascript": ["redis"]
+      },
+      "plugins": {
+        "typescript": "@cole-framework/cole-ts-redis",
+        "javascript": "@cole-framework/cole-js-redis",
+      }
     },
     {
-      "version": "0.0.0",
-      "name": "MySQL",
+      "name": "MySql",
       "alias": "mysql",
-      "package_version": "*",
-      "config_version": "0.0.0",
-      "cole_plugin": "@cole-framework/cole-storage-mysql"
+      "packages": {
+        "typescript": ["mysql"],
+        "javascript": ["mysql"]
+      },
+      "plugins": {
+        "typescript": "@cole-framework/cole-ts-mysql",
+        "javascript": "@cole-framework/cole-js-mysql",
+      }
     }
   ],
-  "web_frameworks": []
+  "web_frameworks": [
+    {
+      "name": "Express.js",
+      "alias": "express",
+      "packages": {
+        "typescript": [
+          "express@^4.18.2",
+          "dev:@types/express@^4.17.17",
+          "body-parser@^1.20.2"
+        ],
+        "javascript": [
+          "express@^4.18.2",
+          "body-parser@^1.20.2"
+        ],
+      },
+      "plugins": {
+        "typescript": "@cole-framework/cole-ts-express",
+        "javascript": "@cole-framework/cole-js-express",
+      }
+    }
+  ],
+  "services": [
+    {
+      "name": "AWS",
+      "alias": "aws",
+      "packages": {
+        "typescript": [
+          "@aws-cdk/aws-apigateway@^1.204.0",
+          "@aws-cdk/aws-lambda@^1.204.0",
+          "@aws-cdk/aws-lambda-nodejs@^1.204.0",
+          "aws-cdk@^2.103.1",
+          "aws-lambda@^1.0.7",
+          "aws-sdk@^2.1483.0",
+        ],
+        "javascript": [
+          "@aws-cdk/aws-apigateway@^1.204.0",
+          "@aws-cdk/aws-lambda@^1.204.0",
+          "@aws-cdk/aws-lambda-nodejs@^1.204.0",
+          "aws-cdk@^2.103.1",
+          "aws-lambda@^1.0.7",
+          "aws-sdk@^2.1483.0",
+        ]
+      },
+      "plugins": {
+        "typescript": "@cole-framework/cole-ts-aws",
+        "javascript": "@cole-framework/cole-js-aws",
+      }
+    }
+  ]
 }
