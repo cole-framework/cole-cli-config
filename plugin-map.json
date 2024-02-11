@@ -10,14 +10,14 @@
       ],
       "plugin": "@cole-framework/cole-ts",
       "cli_plugin": "@cole-framework/cole-cli-typescript",
-      "cli_plugin_config_url": "https://github.com/cole-framework/cole-cli-typescript/blob/main/src/config/config.json",
+      "cli_plugin_config_url": "https://raw.githubusercontent.com/cole-framework/cole-cli-config/main/src/config/config.json",
     },
     {
       "name": "JavaScript",
       "alias": "javascript",
       "plugin": "@cole-framework/cole-js",
       "cli_plugin": "@cole-framework/cole-cli-javascript",
-      "cli_plugin_config_url": "https://github.com/cole-framework/cole-cli-javascript/blob/main/src/config/config.json",
+      "cli_plugin_config_url": "https://raw.githubusercontent.com/cole-framework/cole-cli-config/main/src/config/config.json",
     },
   ],
   "databases": [
