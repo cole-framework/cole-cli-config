@@ -10,15 +10,15 @@
       ],
       "plugin": "@cole-framework/cole-ts",
       "cli_plugin": "@cole-framework/cole-cli-typescript",
-      "cli_plugin_config_url": "https://raw.githubusercontent.com/cole-framework/cole-cli-config/main/src/config/config.json",
+      "cli_plugin_config_url": "https://raw.githubusercontent.com/cole-framework/cole-cli-config/main/src/config/config.json"
     },
     {
       "name": "JavaScript",
       "alias": "javascript",
       "plugin": "@cole-framework/cole-js",
       "cli_plugin": "@cole-framework/cole-cli-javascript",
-      "cli_plugin_config_url": "https://raw.githubusercontent.com/cole-framework/cole-cli-config/main/src/config/config.json",
-    },
+      "cli_plugin_config_url": "https://raw.githubusercontent.com/cole-framework/cole-cli-config/main/src/config/config.json"
+    }
   ],
   "databases": [
     {
@@ -30,7 +30,7 @@
       },
       "plugins": {
         "typescript": "@cole-framework/cole-ts-mongo",
-        "javascript": "@cole-framework/cole-js-mongo",
+        "javascript": "@cole-framework/cole-js-mongo"
       }
     },
     {
@@ -42,7 +42,7 @@
       },
       "plugins": {
         "typescript": "@cole-framework/cole-ts-redis",
-        "javascript": "@cole-framework/cole-js-redis",
+        "javascript": "@cole-framework/cole-js-redis"
       }
     },
     {
@@ -54,7 +54,7 @@
       },
       "plugins": {
         "typescript": "@cole-framework/cole-ts-mysql",
-        "javascript": "@cole-framework/cole-js-mysql",
+        "javascript": "@cole-framework/cole-js-mysql"
       }
     }
   ],
@@ -71,11 +71,11 @@
         "javascript": [
           "express@^4.18.2",
           "body-parser@^1.20.2"
-        ],
+        ]
       },
       "plugins": {
         "typescript": "@cole-framework/cole-ts-express",
-        "javascript": "@cole-framework/cole-js-express",
+        "javascript": "@cole-framework/cole-js-express"
       }
     }
   ],
@@ -90,7 +90,7 @@
           "@aws-cdk/aws-lambda-nodejs@^1.204.0",
           "aws-cdk@^2.103.1",
           "aws-lambda@^1.0.7",
-          "aws-sdk@^2.1483.0",
+          "aws-sdk@^2.1483.0"
         ],
         "javascript": [
           "@aws-cdk/aws-apigateway@^1.204.0",
@@ -98,12 +98,12 @@
           "@aws-cdk/aws-lambda-nodejs@^1.204.0",
           "aws-cdk@^2.103.1",
           "aws-lambda@^1.0.7",
-          "aws-sdk@^2.1483.0",
+          "aws-sdk@^2.1483.0"
         ]
       },
       "plugins": {
         "typescript": "@cole-framework/cole-ts-aws",
-        "javascript": "@cole-framework/cole-js-aws",
+        "javascript": "@cole-framework/cole-js-aws"
       }
     }
   ]
