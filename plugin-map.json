@@ -13,8 +13,8 @@
       "cli_plugin_config_url": "https://raw.githubusercontent.com/cole-framework/cole-cli-typescript/main/src/config/config.json",
       "dependency_injection": [
         {
-          "name": "ColeDI (Default framework container)",
-          "alias": "cole-di",
+          "name": "Singleton Container",
+          "alias": "singleton",
           "packages": []
         },
         {
@@ -32,8 +32,8 @@
       "cli_plugin_config_url": "https://raw.githubusercontent.com/cole-framework/cole-cli-javascript/main/src/config/config.json",
       "dependency_injection": [
         {
-          "name": "ColeDI (Default framework container)",
-          "alias": "cole-di",
+          "name": "Singleton Container",
+          "alias": "singleton",
           "packages": []
         },
         {
@@ -90,11 +90,13 @@
         "typescript": [
           "express@^4.18.2",
           "dev:@types/express@^4.17.17",
-          "body-parser@^1.20.2"
+          "body-parser@^1.20.2",
+          "cors@^2.8.5"
         ],
         "javascript": [
           "express@^4.18.2",
-          "body-parser@^1.20.2"
+          "body-parser@^1.20.2",
+          "cors@^2.8.5"
         ]
       },
       "plugins": {
